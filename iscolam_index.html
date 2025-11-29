@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ISCOLAM Agency — Production & Événements / وكالة ISCOLAM</title>
+  <style>
+    /* Simple, modern responsive styles */
+    :root{--bg:#f8fafc;--card:#ffffff;--muted:#6b7280;--accent:#4f46e5}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#0f172a}
+    .container{max-width:1100px;margin:24px auto;padding:16px}
+    header{display:flex;justify-content:space-between;align-items:center;background:var(--card);padding:12px 16px;border-radius:12px;box-shadow:0 4px 12px rgba(15,23,42,.04)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;background:#0f172a;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:8px;align-items:center}
+    button.lang{padding:8px 12px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;cursor:pointer}
+    button.lang.active{background:var(--accent);color:white;border-color:transparent}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px;align-items:center}
+    .hero-card{background:linear-gradient(135deg,rgba(79,70,229,.06),rgba(99,102,241,.03));padding:24px;border-radius:12px}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:8px}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,.04)}
+    .services h3{margin:0 0 8px 0}
+    .portfolio .thumb{height:160px;background:#e6eefb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+    form input, form textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px;margin-top:8px}
+    .footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media(min-width:768px){.hero{grid-template-columns:1fr 420px}.logo{width:56px;height:56px;font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="container" id="app" dir="ltr">
+    <header>
+      <div class="brand">
+        <div class="logo">I</div>
+        <div>
+          <div id="siteName">ISCOLAM Agency</div>
+          <div id="tagline" style="color:var(--muted);font-size:13px">Production cinématographique &amp; organisation d'événements</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="lang active" id="btn-fr">FR</button>
+        <button class="lang" id="btn-ar">AR</button>
+        <a href="#contact" class="cta" id="cta">Contactez-nous</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-card card">
+            <h1 id="heroTitle">Nous transformons vos idées en scènes mémorables</h1>
+            <p class="lead" id="heroSub">Production cinéma &amp; TV — Captation audio — Événements live — Marketing digital</p>
+            <a class="cta" href="#contact" id="heroCta">Contactez-nous</a>
+
+            <div style="display:flex;gap:10px;margin-top:16px">
+              <div class="card" style="flex:1">
+                <strong id="locLabel">Localisation</strong>
+                <div id="address">Laâyoune, Sahara marocain</div>
+              </div>
+              <div class="card" style="flex:1">
+                <strong>Email</strong>
+                <div id="email">contact@iscolam.agency</div>
+                <div id="phone">+212 6X XX XX XX XX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="height:260px;background:linear-gradient(180deg,#eef2ff,#fff);border-radius:8px;display:flex;align-items:center;justify-content:center">
+            <div style="text-align:center;color:var(--muted)">
+              <div style="font-weight:600;margin-bottom:8px">Image / Vidéo</div>
+              <div style="font-size:13px">Placez ici une vidéo de présentation ou un carrousel d'images</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" style="margin-top:18px">
+        <div class="card">
+          <h3 id="aboutTitle">À propos de ISCOLAM</h3>
+          <p id="aboutText" style="color:var(--muted);margin-top:8px">ISCOLAM Agency est un collectif créatif basé au Sahara marocain, spécialisé dans la production audiovisuelle, l'enregistrement sonore, la conception graphique et l'organisation d'événements culturels et commerciaux.</p>
+        </div>
+
+        <div class="card services">
+          <h3 id="servicesTitle">Nos services</h3>
+          <ul id="servicesList" style="margin:8px 0 0 16px;color:var(--muted)">
+            <li><strong>Production Cinématographique</strong> — Films, séries, court-métrages, coordination de tournage et post-production.</li>
+            <li><strong>Captation &amp; Studio</strong> — Enregistrement voix, mixage, mastering et post-production audio.</li>
+            <li><strong>Design &amp; Impression</strong> — Conception visuelle, identité, supports imprimés et numériques.</li>
+            <li><strong>Organisation d'événements</strong> — Festivals, concerts, lancements de produit, soirées privées.</li>
+            <li><strong>Marketing Digital</strong> — Stratégie réseaux sociaux, contenu, publicité et community management.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="portfolio" style="margin-top:18px">
+        <h3 id="portfolioTitle">Projets récents</h3>
+        <div class="grid" style="margin-top:12px">
+          <div class="card">
+            <div class="thumb">Projet 1</div>
+            <div style="margin-top:10px"><strong>Projet 1</strong><div style="color:var(--muted);font-size:13px">Description brève du projet.</div></div>
+          </div>
+          <div class="card">
+            <div class="thumb">Projet 2</div>
+            <div style="margin-top:10px"><strong>Projet 2</strong><div style="color:var(--muted);font-size:13px">Description brève du projet.</div></div>
+          </div>
+          <div class="card">
+            <div class="thumb">Projet 3</div>
+            <div style="margin-top:10px"><strong>Projet 3</strong><div style="color:var(--muted);font-size:13px">Description brève للمشروع.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:18px">
+        <div class="grid">
+          <div class="card">
+            <h3 id="contactTitle">Contactez-nous</h3>
+            <p id="contactSub" style="color:var(--muted);margin-top:8px">Prêt à concrétiser votre projet ? Envoyez-nous un message.</p>
+
+            <form onsubmit="event.preventDefault();alert('Message envoyé (démo)');" style="margin-top:12px">
+              <label id="lblName">Nom</label>
+              <input required placeholder="Votre nom" />
+              <label style="margin-top:8px" id="lblEmail">Email</label>
+              <input type="email" required placeholder="you@exemple.com" />
+              <label style="margin-top:8px" id="lblMessage">Message</label>
+              <textarea required placeholder="Votre message" rows="5"></textarea>
+              <div style="margin-top:10px"><button class="cta" type="submit" id="btnSend">Envoyer</button></div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h4 id="infoTitle">Informations</h4>
+            <div style="color:var(--muted);margin-top:8px">
+              <div><strong id="addrLabel">Adresse:</strong> <span id="addr">Laâyoune, Sahara marocain</span></div>
+              <div style="margin-top:8px"><strong>Email:</strong> <span id="mail">contact@iscolam.agency</span></div>
+              <div style="margin-top:8px"><strong id="phoneLabel">Téléphone:</strong> <span id="ph">+212 6X XX XX XX XX</span></div>
+
+              <div style="margin-top:12px">
+                <strong id="socialTitle">Réseaux</strong>
+                <div style="margin-top:8px;display:flex;gap:8px">
+                  <a href="#">Facebook</a>
+                  <a href="#">Instagram</a>
+                  <a href="#">YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">© <span id="year"></span> ISCOLAM Agency — Tous droits réservés.</div>
+    </main>
+  </div>
+
+  <script>
+    // Bilingual content (FR / AR)
+    const content = {
+      fr: {
+        lang: 'fr', dir: 'ltr', siteName: 'ISCOLAM Agency', tagline: "Production cinématographique & organisation d'événements",
+        heroTitle: "Nous transformons vos idées en scènes mémorables",
+        heroSub: "Production cinéma & TV — Captation audio — Événements live — Marketing digital",
+        heroCta: 'Contactez-nous', aboutTitle: 'À propos de ISCOLAM', aboutText: "ISCOLAM Agency est un collectif créatif basé au Sahara marocain, spécialisé dans la production audiovisuelle, l'enregistrement sonore, la conception graphique et l'organisation d'événements culturels et commerciaux.",
+        servicesTitle: 'Nos services', portfolioTitle: 'Projets récents', contactTitle: 'Contactez-nous', contactSub: 'Prêt à concrétiser votre projet ? Envoyez-nous un message.',
+        address: 'Laâyoune, Sahara marocain', email: 'contact@iscolam.agency', phone: '+212 6X XX XX XX XX', cta: 'Contactez-nous'
+      },
+      ar: {
+        lang: 'ar', dir: 'rtl', siteName: 'وكالة ISCOLAM', tagline: 'للإنتاج السينمائي وتنسيق الفعاليات في الصحراء',
+        heroTitle: 'نحو تحويل أفكاركم إلى مشاهد لا تُنسى',
+        heroSub: 'إنتاج أفلام وبرامج - تسجيل صوتي - تنظيم فعاليات - تسويق رقمي',
+        heroCta: 'اتصل بنا', aboutTitle: 'من نحن', aboutText: 'وكالة ISCOLAM هي مجموعة إبداعية مقرها الصحراء المغربية متخصصة في الإنتاج السمعي البصري، التسجيل الصوتي، تصميم وطباعة المواد، وتنظيم الفعاليات الثقافية والتجارية.',
+        servicesTitle: 'خدماتنا', portfolioTitle: 'أحدث أعمالنا', contactTitle: 'تواصل معنا', contactSub: 'هل أنت مستعد لتحقيق مشروعك؟ أرسل لنا رسالة.',
+        address: 'العيون، الصحراء المغربية', email: 'contact@iscolam.agency', phone: '+212 6X XX XX XX XX', cta: 'اتصل بنا'
+      }
+    };
+
+    const setLang = (key) => {
+      const t = content[key];
+      document.documentElement.lang = t.lang;
+      const app = document.getElementById('app');
+      app.dir = t.dir;
+      // Text replacements
+      document.getElementById('siteName').textContent = t.siteName;
+      document.getElementById('tagline').textContent = t.tagline;
+      document.getElementById('heroTitle').textContent = t.heroTitle;
+      document.getElementById('heroSub').textContent = t.heroSub;
+      document.getElementById('heroCta').textContent = t.heroCta;
+      document.getElementById('aboutTitle').textContent = t.aboutTitle;
+      document.getElementById('aboutText').textContent = t.aboutText;
+      document.getElementById('servicesTitle').textContent = t.servicesTitle;
+      document.getElementById('portfolioTitle').textContent = t.portfolioTitle;
+      document.getElementById('contactTitle').textContent = t.contactTitle;
+      document.getElementById('contactSub').textContent = t.contactSub;
+      document.getElementById('addr').textContent = t.address;
+      document.getElementById('mail').textContent = t.email;
+      document.getElementById('ph').textContent = t.phone;
+      document.getElementById('cta').textContent = t.cta;
+
+      // Update button active state
+      document.getElementById('btn-fr').classList.toggle('active', key === 'fr');
+      document.getElementById('btn-ar').classList.toggle('active', key === 'ar');
+
+      // Align text direction for some elements (helpful for Arabic)
+      const align = t.dir === 'rtl' ? 'right' : 'left';
+      document.querySelectorAll('.card, .hero-card').forEach(el => el.style.textAlign = align);
+    };
+
+    document.getElementById('btn-fr').addEventListener('click', ()=> setLang('fr'));
+    document.getElementById('btn-ar').addEventListener('click', ()=> setLang('ar'));
+
+    // Init
+    document.getElementById('year').textContent = new Date().getFullYear();
+    setLang('fr');
+  </script>
+</body>
+</html>
